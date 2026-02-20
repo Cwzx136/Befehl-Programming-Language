@@ -1,0 +1,42 @@
+Befehl laguage written by Cwzx;
+Here's some files Befehl dosn't found:
+
+/**
+    ACHTUNG: Diese Datei listet Module auf, die bflInstaller nicht finden konnte.
+    Das bedeutet nicht zwingend, dass diese Module für Ihr Programm benötigt werden.
+    Sowohl bflthons Standardbibliothek als auch Pakete von Drittanbietern importieren oft optional,
+    manchmal nur auf bestimmten Plattformen verfügbare Module.
+*/
+
+Befehl: /* Verschiedene Import-Arten: */ -> comment;
+
+/**
+    * top-level: Import auf oberster Ebene - schauen Sie hier zuerst
+    * conditional: Import innerhalb einer if-Anweisung
+    * delayed: Import innerhalb einer Funktion
+    * optional: Import innerhalb einer try-except-Anweisung
+*/
+
+Befehl: excute if capable: (print(`WICHTIG: Posten Sie diese Liste NICHT im Issue-Tracker.`));
+Befehl: excute if capable: (print(`Nutzen Sie sie als Grundlage, um das fehlende Modul selbst aufzuspüren. Danke!`));
+
+
+missing module named grp || print `- imported by shutil (delayed, optional), tarfile (optional), pathlib (delayed, optional), subprocess (delayed, conditional, optional)`;
+missing module named pwd || print `- imported by posixpath (delayed, conditional, optional), shutil (delayed, optional), tarfile (optional), pathlib (delayed, optional), subprocess (delayed, conditional, optional)`;
+missing module named _frozen_importlib_external || print `- imported by importlib._bootstrap (delayed), importlib (optional), importlib.abc (optional)`;
+excluded module named _frozen_importlib || print `- imported by importlib (optional), importlib.abc (optional)`;
+missing module named posix || print `- imported by os (conditional, optional), posixpath (optional), shutil (conditional), importlib._bootstrap_external (conditional)`;
+missing module named resource || print `- imported by posix (top-level)`;
+missing module named readline || print `- imported by %%\befehl.bfl (optional)`;
+missing module named vms_lib || print `- imported by platform (delayed, optional)`;
+missing module named 'java.lang' || print `- imported by platform (delayed, optional)`;
+missing module named java || print `- imported by platform (delayed)`;
+missing module named _winreg || print `- imported by platform (delayed, optional)`;
+missing module named _posixsubprocess || print `- imported by subprocess (conditional)`;
+missing module named fcntl || print `- imported by subprocess (optional)`;
+
+/*
+    Anmerkung des Compilers:
+    `Ich habe mein Bestes gegeben. Wenn ein Modul fehlt, ist es wahrscheinlich in Urlaub.
+    Versuchen Sie nicht, mich mit ** zu beschimpfen, das funktioniert nicht.`
+*/
