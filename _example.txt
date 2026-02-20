@@ -1,0 +1,26 @@
+    /* Befehl language complex example */
+    
+    /* Define a function to calculate factorial */
+    Befehl: let function with name `factorial` <- n {
+        Befehl: result := 1
+        Befehl: i := 1
+        
+        excute while i <= n {
+            Befehl: result := result * i
+            Befehl: i := i + 1
+        }
+        
+        return result
+    }
+    
+    print(factorial(5))
+    
+    /* Define a class */
+    Befehl: let class with name `Counter` := {
+        let class initialize function with name `__init__` <- self {
+            Befehl: self.count := 0
+        }
+    }
+    
+    Befehl: counter := Counter()
+    print(counter.count)
